@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>DPMFOLIO</h1>
+        <p>heroku test</p>
       </header>
     </div>
   );
