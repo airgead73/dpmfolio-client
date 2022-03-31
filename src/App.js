@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>DPMFOLIO</h1>
-        <p>session test</p>
+        <p><small><a href="/authors" target="_blank">authors</a></small></p>
       </header>
     </div>
   );
