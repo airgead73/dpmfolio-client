@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>DPMFOLIO</h1>
-        <p>db test</p>
+        <p>session test</p>
       </header>
     </div>
   );
