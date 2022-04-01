@@ -1,17 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
 
-ReactDOM.render(
+const container = document.getElementById('app');
+
+const root = ReactDOMClient.createRoot(container);
+
+root.render(
   <React.StrictMode>
     <Router>
       <Auth0ProviderWithHistory>
         <App />
       </Auth0ProviderWithHistory>
     </Router>    
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </React.StrictMode>,  
+)
