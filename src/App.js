@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
 import { NavBar, Loading } from './components';
-import { Home, Profile } from './views';
+import { ExternalApi, Home, Profile } from './views';
 import ProtectedRoutes from './auth/protected-route';
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route element={<ProtectedRoutes/>}>
-          <Route path="profile" element={<Profile/>} />
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="/external" element={<ExternalApi/>} />
         </Route>
       </Routes>
 
