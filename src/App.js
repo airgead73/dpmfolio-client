@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { NavBar, Loading } from './components';
 import { ExternalApi, Home, Profile } from './views';
 import ProtectedRoutes from './auth/protected-route';
+import React from 'react';
 
 function App() {
   const { isLoading } = useAuth0();
@@ -13,8 +14,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+
+    <React.Fragment>
       <NavBar/>
+      <main className='container'>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route element={<ProtectedRoutes/>}>
@@ -22,8 +25,9 @@ function App() {
           <Route path="/external" element={<ExternalApi/>} />
         </Route>
       </Routes>
-
-    </div>
+      </main>
+    </React.Fragment>
+ 
   );
 }
 
